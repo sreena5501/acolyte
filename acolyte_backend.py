@@ -151,44 +151,43 @@ def spell(key):
 def song():
     playsound('song.mp3')
     
-def start():
 
-    #talk("hi I am your assistant you can ask me how to pronunce words or say meaning or synonym or antonym")
-    talk("what u want me to do say meaning  synonym  antonym or pronounciation  ")
-    choice=take_command(4)
-    choice=choice.split()
-    if "meaning" in choice:
-        talk("say something")
-        a=take_command(5)
-        meanin(a)
-        
-    elif "synonym" in choice:
-        talk("say something")
-        a=take_command(5)
-        syno(a)
-        
-    elif "antonym" in choice:
-        talk("say something")
-        a=take_command(5)
-        anto(a)
-        
-    elif "pronunciation" in choice or "pronunce" in choice:
-        talk("say something")
-        a=take_command(7)
-        pron(a)
-        
-    elif "music" in choice:
-        song()
-        
-    elif "spelling" in choice or "spell" in choice:
-        talk("say something")
-        a=take_command(5)
-        spell(a)
-    
-    elif "stop" in choice:
-        return 0
+#talk("hi I am your assistant you can ask me how to pronunce words or say meaning or synonym or antonym")
+talk("what u want me to do say meaning  synonym  antonym or pronounciation  ")
+choice=take_command(4)
+choice=choice.split()
+if "meaning" in choice:
+    talk("say something")
+    a=take_command(5)
+    meanin(a)
 
-    else:
-        talk("cant get you")
-        return 0
+elif "synonym" in choice:
+    talk("say something")
+    a=take_command(5)
+    syno(a)
+
+elif "antonym" in choice:
+    talk("say something")
+    a=take_command(5)
+    anto(a)
+
+elif "pronunciation" in choice or "pronunce" in choice:
+    talk("say something")
+    a=take_command(7)
+    pron(a)
+
+elif "music" in choice:
+    song()
+
+elif "spelling" in choice or "spell" in choice:
+    talk("say something")
+    a=take_command(5)
+    spell(a)
+
+elif "stop" in choice:
+    return 0
+
+else:
+    talk("cant get you")
+    return 0
 
